@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+  menuActive = false;
+  onMenuTrigger() {
+      this.menuActive = !this.menuActive;
+  }
+  hideMenu() {
+      this.menuActive = false;
+  }
 }

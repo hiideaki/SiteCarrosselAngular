@@ -1,1 +1,50 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import url('https://fonts.googleapis.com/css?family=Abel');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    margin: 30px 160px;
+    line-height: 28px;
+    font-size: 20px;
+    text-align: justify;
+}
+
+h1 {
+    margin: 30px 160px;
+    font-size: 36px;
+    letter-spacing: 4px;
+}
+
+
+html {
+    position: relative;
+    min-height: calc(100% - 180px);
+    padding-bottom: 180px;
+}
+
+body {
+    background-image: url("assets/img/bg3.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-attachment: fixed;
+    font-family: 'Abel', sans-serif;
+}
+
+@media only screen and (max-width: 800px) {
+    
+    
+    p {
+        margin: 30px 40px;
+    }
+    
+    h1 {
+        margin: 30px 40px;
+    }
+    
+}
+

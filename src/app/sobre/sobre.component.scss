@@ -1,0 +1,26 @@
+
+img {
+    margin: 0 160px;
+}
+
+figure img {
+    position: relative;
+    margin: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+@media only screen and (max-width: 800px) {
+    figure {
+        margin: 0;
+        padding: 0;
+    }
+    
+    img {
+        position: relative;
+        margin: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+}

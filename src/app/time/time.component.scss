@@ -1,0 +1,179 @@
+
+
+.displayTime span {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #fff;
+    text-align: center;
+    white-space: pre-wrap;
+    word-spacing: 110px;
+}
+
+.btnL {
+    position: relative;
+    box-shadow: 0 0 0 0, 0 0 0 0, 17px 0 15px -4px #16324D, 0 0 0 0;
+    z-index: 1;
+}
+
+.btnR {
+    position: relative;
+    box-shadow: 0 0 0 0, 0 0 0 0, 0 0 0 0, -17px 0 15px -4px #16324D;
+    z-index: 1;
+}
+
+span svg {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    fill: #fff;
+}
+
+.displayTime {
+    position: relative;
+    overflow-x: hidden;
+    background: #16324D;
+    white-space: nowrap;
+    padding: 0 50px;
+    width: calc(100% - 100px);
+}
+
+.displayTime a {
+    display: inline-block;
+    margin: 25px;
+    cursor: pointer;
+    max-width: 110px;
+}
+
+.displayTime a * {
+    display: block;
+}
+
+.listaMembros {
+    display: flex;
+    margin: 30px 160px;
+    margin-bottom: 0;
+}
+
+.listaMembros *::selection {
+    background: none;
+}
+
+.listaMembros > * {
+    float: left;
+}
+
+.listaMembros > span {
+    background: #16324D;
+    width: 50px;
+    cursor: pointer;
+}
+
+
+.borda {
+    height: 110px;
+    width: 110px;
+    border-radius: 50%;
+    background: #fff;
+    transition: .3s;
+    transform-origin: 50% 50%;
+}
+
+.foto {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    padding: 5px;
+    transition: .3s;
+    transform-origin: 50% 50%;
+}
+
+.selected .borda {
+    transform: scale(1.2);
+    background: #749EC7;
+}
+
+.selected span {
+    font-weight: bolder;
+}
+
+
+.perfil {
+    grid-area: perfil;
+    width: 300px;
+    height: 300px;
+    padding: 30px;
+}
+
+.bio {
+    grid-area: bio;
+    padding: 30px;
+}
+
+.bio h1 {
+    padding: 0 !important;
+    margin: 0 !important;
+    
+}
+
+.bio p {
+    padding: 0 !important;
+    margin: 0 !important;
+    white-space: pre-line
+}
+
+
+.info {
+    display: grid;
+    width: calc(100% - 320px);
+    grid-template-areas:
+    'perfil bio ';
+    margin: 30px 160px;
+    border: 7px solid #16324D;
+    margin-top: 0;
+    padding: 30px;
+    background: rgba(255, 255, 255, .8);
+    box-sizing: border-box;
+}
+
+@media only screen and (max-width: 1100px) {
+    
+    
+    .displayTime a {
+        max-width: 80px;
+    }
+    
+    .borda {
+        height: 80px;
+        width: 80px;
+    }
+    
+    .foto {
+        width: 70px;
+        height: 70px;
+    }
+    
+    .perfil {
+        width: 200px !important;
+        height: 200px !important;
+        
+    }
+    
+    .listaMembros {
+        margin: 30px 10px;
+        margin-bottom: 0;
+    }    
+    
+    .info {
+        width: calc(100% - 20px);
+        margin: 30px 10px;
+        margin-top: 0;
+        grid-template-areas:
+        'perfil'
+        'bio' !important;
+    }
+    
+}
+
+
+

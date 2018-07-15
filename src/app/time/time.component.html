@@ -1,0 +1,25 @@
+<h1>A equipe</h1>
+<p>
+A equipe de robótica Carrossel Caipira da UNESP-Bauru tem um importante papel na categoria VSS (Very Small Size) de futebol de robôs devido aos títulos conquistados, como o vice-campeonato da primeira competição da categoria em 1998, garantindo a vaga para disputar o campeonato mundial do mesmo ano na França. A partir de uma parceria entre POLI-USP e Carrossel Caipira, o time conhecido como Guaraná sagrou-se vice-campeão dessa edição. Nos anos seguintes, a equipe foi campeã no VI SBAI (Simpósio Brasileiro de Automação Inteligente) em 2003 e no VII SBAI em 2005.
+</p>
+
+<div class="listaMembros">
+    <span class="btnL" (click)="scrollBackward()"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M320 128L192 256l128 128z"/></svg></span>
+    <div class="displayTime">
+        <a *ngFor="let membro of membros; let i = index" (click)="onMemberClick(i)" id="membro{{ i }}" [ngClass]="{'selected': i === currentIndex}">
+            <div class="borda">
+                <img src="../../assets/img/equipe/{{ membro[0] }}" class="foto">
+            </div>
+        </a>
+    </div>
+    <span class="btnR" (click)="scrollForward()"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M192 128l128 128-128 128z"/></svg></span>
+</div>
+<div class="info">
+    <img src="../../assets/img/equipe/{{ pessoa[0] }}" class="perfil"/>
+    <div class="bio">
+        <h1 [innerHTML]="pessoa[1]"></h1>
+        <h3 [innerHTML]="pessoa[2]"></h3>
+        <p [innerHTML]="pessoa[3]"></p>
+    </div>
+
+</div>
