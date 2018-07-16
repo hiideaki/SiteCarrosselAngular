@@ -5,6 +5,7 @@ import { SobreComponent } from './sobre/sobre.component';
 import { HistoriaComponent } from './historia/historia.component';
 import { TimeComponent } from './time/time.component';
 import { ContatoComponent } from './contato/contato.component';
+import { NotfoundComponent } from './notfound/notfound.component';
 
 const routes: Routes = [
     {
@@ -30,6 +31,14 @@ const routes: Routes = [
     {
         path: 'contato',
         component: ContatoComponent
+    },
+    {
+        path: '404',
+        component: NotfoundComponent
+    },
+    {
+        path: '**',
+        redirectTo: '404'
     }
 ];
 

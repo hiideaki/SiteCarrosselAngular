@@ -105,6 +105,10 @@ span svg {
     padding: 30px;
 }
 
+.perfil::selection {
+    background: transparent;
+}
+
 .bio {
     grid-area: bio;
     padding: 30px;
@@ -122,6 +126,11 @@ span svg {
     white-space: pre-line
 }
 
+::ng-deep .profileReference {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+}
 
 .info {
     display: grid;

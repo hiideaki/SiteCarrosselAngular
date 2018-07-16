@@ -9,6 +9,7 @@ import { HistoriaComponent } from './historia/historia.component';
 import { TimeComponent } from './time/time.component';
 import { ContatoComponent } from './contato/contato.component';
 import { EventosComponent } from './eventos/eventos.component';
+import { NotfoundComponent } from './notfound/notfound.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { EventosComponent } from './eventos/eventos.component';
     HistoriaComponent,
     TimeComponent,
     ContatoComponent,
-    EventosComponent
+    EventosComponent,
+    NotfoundComponent
   ],
   imports: [
     BrowserModule,
