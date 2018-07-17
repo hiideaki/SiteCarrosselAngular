@@ -39,9 +39,31 @@ export class TimeComponent implements OnInit {
 
   ngOnInit() {
   }
+  
+  horizontalScrollIntoView(i) {
+      var parWid = document.querySelector('div.displayTime').clientWidth;
+      var unitWid = document.getElementById(i).clientWidth;
+      var scrolledLeft = document.querySelector('div.displayTime').scrollLeft + parWid / 2;
+      var offsetLeft = document.getElementById(i).offsetLeft
+      var dir = scrolledLeft > offsetLeft ? -1 : 1;
+      var qtFrames = 50;
+      var inc = Math.abs(offsetLeft - scrolledLeft + unitWid / 2) / qtFrames;
+      var tempo = 0;
+      
+      var incremento = function() {
+          document.querySelector('div.displayTime').scrollLeft = scrolledLeft - parWid / 2 + inc * dir * tempo;
+          tempo++;
+          if(tempo < qtFrames) {
+            setTimeout(incremento, 1);
+          }
+      }   
+      incremento();
+  }    
     
+ 
+      
   onMemberClick(i) {
-      document.getElementById('membro' + i).scrollIntoView({behavior: 'smooth', block: 'start'});
+      this.horizontalScrollIntoView('membro' + i);
       this.currentIndex = i;
       this.pessoa = this.membros[i];
   }
@@ -49,16 +71,25 @@ export class TimeComponent implements OnInit {
   scrollBackward() {
       if(this.currentIndex > 0) {
           this.currentIndex--;
-          document.getElementById('membro' + this.currentIndex).scrollIntoView({behavior: 'smooth', block: 'start'});
+          this.horizontalScrollIntoView('membro' + this.currentIndex);
           this.pessoa = this.membros[this.currentIndex];
       }
   }
     
   scrollForward() {
+
       if(this.currentIndex < this.n - 1) {
           this.currentIndex++;
-          document.getElementById('membro' + this.currentIndex).scrollIntoView({behavior: 'smooth', block: 'start'});
+          this.horizontalScrollIntoView('membro' + this.currentIndex);
           this.pessoa = this.membros[this.currentIndex];
       }
+  }
+    
+  windowResize() {
+      var aux = this;
+      setTimeout(function() {
+          aux.horizontalScrollIntoView('membro' + aux.currentIndex);
+      }, 400);
+      
   }
 }

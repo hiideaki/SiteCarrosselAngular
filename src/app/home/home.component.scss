@@ -1,0 +1,54 @@
+.container {
+//    background: #ccc;
+    position: relative;
+    width: 80%;
+    margin: 30px auto;
+}
+
+.slideshow {
+    overflow-x: hidden;
+    background: rgba(22, 50, 77, 0.5);
+    white-space: nowrap;
+}
+
+.slide {
+    position: relative;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background: #fcf;
+}
+
+.slide img {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.slide video {
+    margin-left: 50%;
+    max-height: 100%;
+    transform: translateX(-50%);
+}
+
+.container a {
+    background: rgba(255, 255, 255, 0.5);
+    position: absolute;
+    width: 100px;
+    height: 100%;   
+    top: 0;
+    text-align: center;
+    z-index: 1;
+}
+
+.left {
+    left: 0;
+}
+
+.right {
+    right: 0;
+}
