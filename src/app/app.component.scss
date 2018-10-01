@@ -29,10 +29,14 @@ header nav a {
     transition: .5s;
 }
 
+nav {
+    z-index: 2;
+}
+
 footer {
     position: absolute;
     bottom: 0;
-    height: 60;
+    height: 60px;
     width: 100%;
     text-align: center;
     background: #16324D;
@@ -159,8 +163,8 @@ svg[name="github"]:hover {
         height: 0;
         overflow: hidden;
         transition: .4s ease-out;
-        z-index: 1;
         width: 100%;
+        z-index: 500;
     }
     
     nav li {

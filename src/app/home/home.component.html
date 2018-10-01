@@ -1,25 +1,12 @@
+<!-- 
+<h1>Página principal</h1> -->
 
-<h1>Página principal</h1>
+<!-- 
+    Slideshow from:
+    https://www.npmjs.com/package/ng-simple-slideshow 
+-->
 
-<div class="container">
-    <a class="left" (click)="prev()">left</a>
-    <div class="cbox">
-    
-    </div>
-    <a class="right" (click)="next()">right</a>
-    <div class="slideshow">
-        <div class="slide" id="slide0"><img src="./assets/img/carousel-1.jpg"/></div>
-        <div class="slide" id="slide1"><img src="./assets/img/carousel-2.jpg"/></div>
-        <div class="slide" id="slide2"><img src="./assets/img/carousel-3.jpg"/></div>
-        <div class="slide" id="slide3">
-            <img src="./assets/img/exemplo.png"/>
-        </div>
-        <div class="slide" id="slide4">
-            <video>
-<!--        <video controls autoplay loop>-->
-                <source src="./assets/vid/carousel-vid.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-        </div>
-    </div>
+<div class="slideContainer">
+    <slideshow 
+    [imageUrls]="imageUrlArray"></slideshow>
 </div>

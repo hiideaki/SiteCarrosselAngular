@@ -44,7 +44,7 @@ export class TimeComponent implements OnInit {
       var parWid = document.querySelector('div.displayTime').clientWidth;
       var unitWid = document.getElementById(i).clientWidth;
       var scrolledLeft = document.querySelector('div.displayTime').scrollLeft + parWid / 2;
-      var offsetLeft = document.getElementById(i).offsetLeft
+      var offsetLeft = document.getElementById(i).offsetLeft;
       var dir = scrolledLeft > offsetLeft ? -1 : 1;
       var qtFrames = 50;
       var inc = Math.abs(offsetLeft - scrolledLeft + unitWid / 2) / qtFrames;
