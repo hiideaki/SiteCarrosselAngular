@@ -1,21 +1,22 @@
 <h1>Contato</h1>
 <p>Deixe-nos uma mensagem!</p>
 
-<form>
+<!-- <form> -->
 <!-- <form ngSubmit="https://script.google.com/macros/s/AKfycbx2CUgBUEWd3sCuu7i_z7Dyw8Mg7L33NMMtUq9xed6iKWjwrBc/exec"> -->
-<!-- <form class="gform" action="https://script.google.com/macros/s/AKfycbx2CUgBUEWd3sCuu7i_z7Dyw8Mg7L33NMMtUq9xed6iKWjwrBc/exec" method="POST"> -->
+<form class="gform" action="https://script.google.com/macros/s/AKfycbx2CUgBUEWd3sCuu7i_z7Dyw8Mg7L33NMMtUq9xed6iKWjwrBc/exec"
+ method="POST" onsubmit="window.location.replace('localhost:4200/time')">
     <label>Nome:</label>
-    <input type="text" name="name"required/>
+    <input type="text" name="name"/>
 
     <label>E-mail</label>
-    <input type="text" name="email"required/>
+    <input type="text" name="email"/>
     
     <label>Mensagem</label>
-    <textarea type="text" rows="14" name="message"required></textarea>
+    <textarea type="text" rows="14" name="message"></textarea>
     
     <input type="submit" value="Enviar" tabindex="-1">
 
-    <div style="opacity: 0;" class="mensagemRetorno">
+    <div style="opacity: 0;" class="thankyou_message">
         <span>Obrigado pelo contato!<br>
         Entraremos em contato com você em breve!</span>
     </div>

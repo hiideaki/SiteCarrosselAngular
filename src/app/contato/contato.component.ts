@@ -1,5 +1,5 @@
-import { Component, OnInit, Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { Component, OnInit } from '@angular/core';
+
 
 @Component({
   selector: 'app-contato',
@@ -15,11 +15,6 @@ export class ContatoComponent implements OnInit {
     
   }
 
-  submit($event) {
-    $event.preventDefault();
-
-    console.log('kkkdsa');
-  }
 
   
 }
